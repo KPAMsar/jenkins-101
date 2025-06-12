@@ -1,0 +1,43 @@
+pipeline {
+agent {
+node {
+label 'docker-agent-python'
+}
+}
+
+    triggers {
+        pollSMC '*/5 * * * *'
+    }
+    stages {
+        stage('Welcome'){
+            steps {
+                echo "Wellcome to my first CI Pipeline,,,,"
+            }
+        }
+        stage('Build') {
+            steps {
+                echo "Building.."
+                sh '''
+                echo "doing build stuff.."
+                '''
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "Testing.."
+                sh '''
+                echo "doing test stuff.."
+                '''
+            }
+        }
+        stage('Deliver') {
+            steps {
+                echo 'Deliver....'
+                sh '''
+                echo "doing delivery stuff.."
+                '''
+            }
+        }
+    }
+
+}
