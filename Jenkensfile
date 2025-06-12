@@ -6,7 +6,7 @@ label 'docker-agent-python'
 }
 
     triggers {
-        pollSMC '* * * * *'
+        pollSCM '* * * * *'
     }
     stages {
         stage('Welcome'){
