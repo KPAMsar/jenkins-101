@@ -11,7 +11,7 @@ label 'docker-agent-python'
     stages {
         stage('Welcome'){
             steps {
-                echo "Wellcome to my first CI Pipeline,,,,"
+                echo "Wellcome to my firstt CI Pipeline,,,,"
             }
         }
         stage('Build') {
